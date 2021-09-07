@@ -1,0 +1,70 @@
+//Создание копии исходного массива с замено элемента
+//Исходный массив
+let parrentArray = ["one", "two", "three"]
+//создаем копию массива
+var copyParrentArray = parrentArray
+//Изменяем значение эл-та в копии массива
+copyParrentArray[1] = "four"
+
+//Сравнение двух массивов
+let a1 = 1
+let a2 = 2
+let a3 = 3
+var someArray = [1, 2, 3]
+someArray == [a1, a2, a3] //true
+
+//Слияние массивов
+//Создаем три массива
+let charsOne = [1, 2, 3]
+let charsTwo = [4, 5, 6]
+let charsThree = [7, 8, 9]
+//Создаем новый массив, путем слияния первых двух
+var charsFour = charsOne + charsTwo
+//К созданному массиву добавляем третий
+charsFour += charsThree
+print (charsFour)
+
+//Многомерные массивы
+var arrayOfArrays = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+//доступ к вложенному массиву И вывод на экран
+print (arrayOfArrays[2])
+//доступ к элементу вложенного массива и вывод на экран
+print (arrayOfArrays[0][1])
+
+//Базовые свойства и методы массивов
+let someArrayTwo = [0, 1, 2, 3, 4, 5]
+//количество элементов в массиве и вывод на экран
+print (someArrayTwo.count)
+//Если count равен 0, то isEmpty выведет значение true
+//создаем пустой массив с указанием типа
+var numVarArray: [Int] = []
+print (numVarArray.count)
+print (numVarArray.isEmpty)
+//Получение требуемых элементов массива
+var numbArray = [1, 2, 3, 4, 5]
+print (numbArray.count)
+//Задаем количество требуемых эл-в
+let sliceOfArray = numbArray [numbArray.count-3...numbArray.count-1]
+print (sliceOfArray)
+//Другой способ указания требуемых элементов
+//где 3-количество элементов, отсчет ведется от последнего элемента
+let subArray = numbArray.suffix(3)
+print (subArray)
+//Возвращение первого элемента массива и вывод на экран
+print (subArray.first)
+//Возвращение последнего элемента массива и вывод на экран
+print (subArray.last)
+//Добавление нового элемента "6" в конец массива и вывод на экран
+numbArray.append(6)
+print (numbArray)
+//Добавление элемента с указанным индексом и значением
+var sunArray = [0, 1, 2, 3]
+sunArray.insert(100, at: 1) //сначала указали значение, затем индекс
+//вывод на экран
+print (sunArray)
+//Удаление элементов массива
+sunArray.remove(at: 1) //удаление 2го элемента массива
+sunArray.removeFirst() //удаление 1го элемента массива
+sunArray.removeLast() // удаление последнего элемента массива
+//вывод на экран итогового массива
+print (sunArray) //содержит 2 элемента: 1, 2
